@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{title}}{% endblock %}
+
+
+{% block content %}
+
+<h1>Hello Everyone</h1>
+<ul>
+    {% for item in mylist %}
+    <li>{{ item }}</li>
+    {% endfor %}
+
+</ul>
+<p>{{mylist}}</p>
+<a href="{{url_for('other')}}">Other</a> 
+<!-- //calling the function other in app.py -->
+{% endblock %}
