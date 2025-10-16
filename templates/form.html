@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}{{title}}{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="{{url_for('form')}}">
+    <input type="text" name="username" placeholder="Enter your Username"><br>
+    <input type="password" name="password" placeholder="Enter your Username"><br>
+    <input type="submit" value="Login">
+</form>
+<br>
+<br>
+<h1>File Upload</h1>
+<form method="post" action="{{url_for('file_upload')}}" enctype="multipart/form-data">
+    <input type="file" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/><br>
+    <input type="submit" value="Upload">
+</form>
+
+<br>
+<br>
+<br>
+<h1>Convert to csv</h1>
+<form method="post" action="{{url_for('convert_to_csv')}}" enctype="multipart/form-data">
+    <input type="file" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/><br>
+    <input type="submit" value="Convert">
+</form>
+
+<br>
+<br>
+<h1>Convert to csv 2</h1>
+<form method="post" action="{{url_for('convert_to_csv2')}}" enctype="multipart/form-data">
+    <input type="file" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/><br>
+    <input type="submit" value="Convert">
+</form>
+
+<a href="{{url_for('other')}}">Other</a> 
+<!-- //calling the function other in app.py -->
+{% endblock %}

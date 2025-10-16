@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: beige;
+}
+
+p {
+  color: rgb(120, 199, 64);
+}
+
+h1 {
+  color: rgb(226, 157, 55);
+}/*# sourceMappingURL=styles.css.map */
